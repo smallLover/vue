@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/center.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="lib/vue.js"></script>
+    <script src="lib/vueRouter.js"></script>
+    <script src="js/center.js"></script>
+    </script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <div class="head" id="head">
+        <!-- 左边logo区域 -->
+        <div class="logo">
+            <a href="#" class="fl">
+                <img src="image/logo.png" alt="" class="logo_image">
+            </a>
+        </div>
+        <!-- 右边搜索区域 -->
+        <div class="search fr">
+            <input type="text" name="" placeholder="请输入商品、店铺" class="fl head_goods">
+            <input type="button" value="搜索" class="fr head_btn">
+        </div>
+    </div>
+    <!-- 中间区域 -->
+    <div class="center" id="center">
+        <!-- 左边导航区域 -->
+        <div class="kind fl">
+            <ul>
+                <li v-for="item in kind" :key="item" class="nav">{{item}}</li>
+            </ul>
+        </div>
+        <!-- 右边banner区域 -->
+        <div class="banner fr">
+
+        </div>
+    </div>
+    <!-- 底部区域 -->
+    <div class="footer" id="footer">
+
+    </div>
+
+    <script>
+        let center = new Vue({
+            el: '#center',
+            data: {
+                kind: ["手机", "电视", "笔记本", "加电", "出行", "智能",
+                    "电源", "健康", "耳机", "生活"]
+            },
+        })
+    </script>
+</body>
+
+</html>
